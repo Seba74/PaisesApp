@@ -1,0 +1,51 @@
+table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    thead{
+        display: flex;
+        width: 100%;
+        tr{
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(5, 1fr);
+            border-bottom: 1px solid #7e7e7e;
+            th{
+                font-size: 1.8rem;
+                font-weight: 500;
+                padding: 10px;
+            }
+        }
+    }
+    tbody{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        border-top: .5px solid #7e7e7e;
+        tr{
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(5, 1fr);
+            border: .5px solid #7e7e7e;
+            border-top: none;
+            &:hover{
+                background-color: #e4e2e2;
+            }
+            td{
+                display: flex;
+                width: auto;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+                font-weight: 300;
+                text-align: center;
+                img {
+                    padding: 5px;
+                    width: 55px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}

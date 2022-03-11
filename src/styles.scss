@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+
+.main {
+    width: 100%;
+    margin: 20px;
+}   
+
+.sidebar {
+    border-right: 1px solid #8d8d8d;
+    padding-right: 10px;
+}

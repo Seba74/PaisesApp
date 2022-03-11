@@ -1,0 +1,31 @@
+<div *ngIf="!pais; else divPais" class="alert-info">
+    <h3>Waiting...</h3>
+</div>
+
+<ng-template #divPais>
+    <div class="row animate__animated animate__fadeIn"> 
+        <h1>País: <small>{{pais.name.common}}</small></h1>
+        <div class="info">
+            <figure class="img"><img [src]="pais.flags.svg" alt="flag: {{pais.name.common}} "></figure>
+            <div class="info-dates">
+                <p class="symbol">Simbolo: <small>{{pais.altSpellings[0]}}</small></p>
+                <p class="capital">Capital: <small>{{pais.capital}}</small></p>
+                <p class="population">Población: <small>{{pais.population | number}}</small></p>
+                <p class="region">Región: <small>{{pais.region}}</small></p>
+                <p class="subregion">Subregión: <small>{{pais.subregion}}</small></p>
+                <p class="time">Zona Horaria: <small>{{pais.timezones[0]}}</small></p>
+            </div>
+        </div>
+        <div class="translate">
+            <h3>Traducciones</h3>
+            <div class="idioms">
+                <span
+                    *ngFor="let t of pais.translations | keyvalue"        
+                    class="badge bg-primary mr-5"   
+                >          
+                {{ t.value.official }}   
+                </span>
+            </div>
+        </div>
+    </div>    
+</ng-template>
